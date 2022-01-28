@@ -22,7 +22,7 @@ export default function PriorityHandler() {
             return;
         }
         if (priorityCount > 3) {
-            setValidation("You must have less than 3 top priorities.");
+            setValidation("You can have a maximum of 3 top priorities.");
             return;
         }
         setPriorityCount(previousCount => previousCount + 1);
