@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.validation-message {
+  color: indianred;
+}
+
+.priorityListItem {
+  list-style-position: inside;
+  font-size: 80px;
+}
+
+.priority {
+  font-size: calc(10px + 2vmin);
+  background-color: white;
+  border-radius: 10px;
+  margin:10px;
+  color: black;
+  display: inline-block;
+  width: 80vw;
+  text-align: left;
+}
+
+.priorityName {
+  font-weight: bold;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.priorityTitle {
+  text-align: left;
+}
+
+.priorityDone {
+  display: inline-block;
+  float: right;
+  margin-right: 20px;
+  margin-top: 20px;
+  border: none;
+  background-color: lightgreen;
+  padding: 7px 15px;
+  border-radius: 5px;
+  font-size: calc(5px + 2vmin);
+  cursor: pointer;
+}
+
+.priorityDescription {
+  display: block;
+  text-align: left;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding-bottom: 1em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
