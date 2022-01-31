@@ -60,7 +60,42 @@
   text-align: left;
   margin-block-start: 0em;
   margin-block-end: 0em;
-  padding-bottom: 1em;
+  padding-bottom: 0em;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.taskName {
+  font-size: 20px;
+}
+
+.showHideTasks {
+  border: none;
+  margin: 10px;
+  float: right;
+  background-color: white;
+  font-size: 20px;
+}
+
+.tasks {
+  float: left;
+  margin: 10px;
+}
+
+.taskList {
+  list-style: none;
+  padding: 0px;
+}
+
+.taskDone {
+  border: none;
+  background-color: white;
+}
+
+.taskDone:hover .circle-icon,
+.taskDone .check-circle-icon {
+  display: none;
+}
+.taskDone:hover .check-circle-icon {
+  display: inline;
 }

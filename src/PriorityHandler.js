@@ -36,6 +36,7 @@ export default function PriorityHandler() {
         setDescription("");
         setValidation("");
     }
+
     function removePriority(id) {
         setPriorityCount(previousCount => previousCount - 1);
         const newList = priorities.filter((item) => item.id !== id);
