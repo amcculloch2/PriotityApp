@@ -4,18 +4,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Task from "./Task";
 
 export default function Priority(props) {
-    const {removePriority, details} = props;
-    const [tasks, setTasks] = useState([]);
+    const {removePriority, saveState, details} = props;
+    const [tasks, setTasks] = useState(details.tasks);
     const [task, setTask] = useState("");
     const [taskCounter, setTaskCounter] = useState(0);
     const [showTasks, setShowTasks] = useState(false);
 
     function handleFormSubmit(event) {
         event.preventDefault();
-        setTasks([...tasks, {
+        const newList = [...tasks, {
             taskName: task,
             taskId: taskCounter
-        }]);
+        }];
+        setTasks(newList);
+        const priority = {
+            id: details.id,
+            name: details.name,
+            description: details.description,
+            tasks: newList
+        }
+        saveState(priority);
         setTask("");
         setTaskCounter((prevState => prevState+1));
     }
@@ -23,6 +31,13 @@ export default function Priority(props) {
     function removeTask(id) {
         const newList = tasks.filter((item) => item.taskId !== id);
         setTasks(newList);
+        const priority = {
+            id: details.id,
+            name: details.name,
+            description: details.description,
+            tasks: newList
+        }
+        saveState(priority);
     }
 
     function showHideTasks() {
