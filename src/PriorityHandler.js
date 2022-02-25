@@ -36,7 +36,7 @@ export default function PriorityHandler() {
         event.preventDefault();
 
         if (!name) {
-            setValidation("Priorities must have a name TEST.");
+            setValidation("Priorities must have a name.");
             return;
         }
         if (!description) {
