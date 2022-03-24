@@ -1,15 +1,19 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  align-items: center;
+  min-height: 100vh;
+
+
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
 .validation-message {
@@ -98,4 +102,14 @@
 }
 .taskDone:hover .check-circle-icon {
   display: inline;
+}
+
+.contextsList {
+  align-self: start;
+  text-align: left;
+  list-style: none;
+}
+
+.listedContext {
+  margin: 0;
 }
